@@ -4,15 +4,27 @@ An example kraken 1.0 app demonstrating template specialziation.
 
 To see it working:
 
+#### To start the app:
+* In you console
 ```
-Start the app:
 $ node .
-
-In your browser:
-
-localhost:8000
 ```
-To see client side template specialization, click on the 'Tell Me More' button.
+* In your browser:
+```
+http://localhost:8000
+```
+#### To see specialization at work
+* In you browser
+```
+http://localhost:8000/setSpcl/yin
+(or)
+http://localhost:8000/setSpcl/yang
+(or)
+http://localhost:8000/setSpcl/yinyang
+```
+You will see that the specialization rules will be set in the session and you will be redirected to the index page with the right specialization rules.
+
+* To see client side template specialization, click on the 'Tell Me More' button. You will see that template/styles are different for different specializations.
 
 ###What does the sample app demonstrate ?
 

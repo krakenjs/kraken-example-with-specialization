@@ -25,7 +25,7 @@
 
         "spclContext": {
             "enabled": true,
-            "priority": 95,
+            "priority": 105,
             "module": "path:./lib/specialization"
         },
 
