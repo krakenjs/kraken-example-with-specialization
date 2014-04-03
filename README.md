@@ -1,6 +1,6 @@
 # specialization-example
 
-An example kraken 1.0 app demonstrating template specialziation.
+An example kraken 1.0 app demonstrating template specialization.
 
 To see it working:
 
