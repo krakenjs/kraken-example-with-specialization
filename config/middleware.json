@@ -1,0 +1,38 @@
+{
+    "middleware": {
+
+        "static": {
+            "arguments": [ "path:./.build" ]
+        },
+
+        "router": {
+            "arguments": [{ "directory": "path:./controllers" }]
+        },
+
+        "fileNotFound": {
+            "enabled": true,
+            "priority": 130,
+            "module": "kraken-js/middleware/404",
+            "arguments": [ "errors/404" ]
+        },
+
+        "serverError": {
+            "enabled": true,
+            "priority": 140,
+            "module": "kraken-js/middleware/500",
+            "arguments": [ "errors/500" ]
+        },
+
+        "spclContext": {
+            "enabled": true,
+            "priority": 95,
+            "module": "path:./lib/specialization"
+        },
+
+        "templatePath": {
+            "enabled":true,
+            "priority": 96,
+            "module": "path:./lib/templatePath"
+        }
+    }
+}

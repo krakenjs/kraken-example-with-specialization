@@ -1,0 +1,21 @@
+<div>
+    <table>
+        <tr>
+            <td><img src="img/yinyang.gif"></td>
+        </tr>
+        <tr>
+            <td>Today is a balanced yin-yang day !</td>
+        </tr>
+        <tr>
+            <td>
+                Four Main Aspects of Yin and Yang Relationship:
+                <ul>
+                    <li>Yin & Yang are opposites </li>
+                    <li>Yin & Yang are Interdependent</li>
+                    <li>Relative levels of Yin Yang are continuously changing. </li>
+                    <li>Inter-transformation of Yin & Yang</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+</div>

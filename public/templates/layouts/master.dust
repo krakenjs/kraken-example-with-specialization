@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>{+title /}</title>
+    <link rel="stylesheet" href="/css/app.css" />
+</head>
+<body data-specialization='{_specialization|js|s}' data-template-path="{templatePath}/%s.js">
+<div id="wrapper">
+    {+body /}
+</div>
+<script data-main="/js/app" src="components/requirejs/require.js"></script>
+</body>
+</html>

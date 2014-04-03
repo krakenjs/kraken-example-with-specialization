@@ -1,0 +1,16 @@
+{>"layouts/master" /}
+
+{<body}
+    <link rel="stylesheet" href="css/app.css" />
+    <h1>{@pre type="content" key="greeting"/}</h1>
+    <p>
+        In Chinese philosophy, the concept of yin-yang (simplified Chinese: 阴阳; traditional Chinese: 陰陽; pinyin: yīnyáng), which is often called "yin and yang",is used to describe how opposite or contrary forces are interconnected and interdependent in the natural world; and, how they give rise to each other as they interrelate to one another.
+    </p>
+    <div class="center transbox">
+        {>"yinyang" /}
+    </div>
+    <div class="wrapper">
+        <button id="more" class="button">Tell me more...</button>
+        <div id="moreInfo"></div>
+    </div>
+{/body}

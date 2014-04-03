@@ -1,0 +1,75 @@
+{
+
+    "express": {
+        "view cache": false,
+        "view engine": "js",
+        "views": "path:./.build/templates"
+    },
+
+    "view engines": {
+        "js": {
+            "module": "engine-munger",
+            "renderer": {
+                "method": "js",
+                "arguments": [{ "cache": false }]
+            }
+        }
+    },
+
+    "i18n": {
+        "contentPath": "path:./locales",
+        "fallback": "en-US"
+    },
+
+    "specialization": {
+        "yinyang": [
+            {
+                "is": "yin",
+                "when": {
+                    "energy.is": "female",
+                    "orientation.is": "moon"
+                }
+            },
+            {
+                "is": "yang",
+                "when": {
+                   "energy.is": "male",
+                   "orientation.is": "sun"
+                }
+            }
+        ],
+        "nested/yinyang": [
+            {
+                "is": "nested/yin",
+                "when": {
+                    "energy.is": "female",
+                    "orientation.is": "moon"
+                }
+            },
+            {
+                "is": "nested/yang",
+                "when": {
+                    "energy.is": "male",
+                    "orientation.is": "sun"
+                }
+            }
+        ],
+        "nested/peace": [
+            {
+                "is": "nested/peace-yin",
+                "when": {
+                    "energy.is": "female",
+                    "orientation.is": "moon"
+                }
+            },
+            {
+                "is": "nested/peace-yang",
+                "when": {
+                    "energy.is": "male",
+                    "orientation.is": "sun"
+                }
+            }
+        ]
+    }
+
+}
