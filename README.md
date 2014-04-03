@@ -16,7 +16,7 @@ To see client side template specialization, click on the 'Tell Me More' button.
 
 ###What does the sample app demonstrate ?
 
-* [Adding rules into the app's config file]
+* [Adding rules into the app's config file](https://github.com/krakenjs/kraken-examples/blob/master/with.specialization/config/app.json#L24)
 
 * [Setting the context from middleware]
 
