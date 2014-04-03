@@ -27,3 +27,6 @@ To see client side template specialization, click on the 'Tell Me More' button.
 * [Sample client code demonstrating client side template specialization](https://github.com/krakenjs/kraken-examples/blob/master/with.specialization/public/js/app.js#L19)
 
 * [A sample dust for client side template specialization demonstrating custom load of css as well as nested specialized templates](https://github.com/krakenjs/kraken-examples/blob/master/with.specialization/public/templates/nested/yin.dust)
+
+
+You can play with the specialization rules in the config + what you set in the context to see how dust partials gets specialized. Have Fun!!
