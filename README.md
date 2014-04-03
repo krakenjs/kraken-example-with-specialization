@@ -18,12 +18,12 @@ To see client side template specialization, click on the 'Tell Me More' button.
 
 * [Adding rules into the app's config file](https://github.com/krakenjs/kraken-examples/blob/master/with.specialization/config/app.json#L24)
 
-* [Setting the context from middleware]
+* [Setting the context from middleware](https://github.com/krakenjs/kraken-examples/blob/master/with.specialization/lib/specialization.js#L5)
 
-* [Setting the context in the model passed to res.render in the controllers]
+* [Setting the context in the model passed to res.render in the controllers](https://github.com/krakenjs/kraken-examples/blob/master/with.specialization/controllers/index.js#L14)
 
-* [Adding specialization map to data-attribute in the master.dust to enable client side specialization]
+* [Adding specialization map to data-attribute in the master.dust to enable client side specialization](https://github.com/krakenjs/kraken-examples/blob/master/with.specialization/public/templates/layouts/master.dust#L8)
 
-* [Sample client code demonstrating client side template specialization]
+* [Sample client code demonstrating client side template specialization](https://github.com/krakenjs/kraken-examples/blob/master/with.specialization/public/js/app.js#L19)
 
-* [Client side template specialization demonstrating custom load of css as well as nested specialized templates]
+* [A sample dust for client side template specialization demonstrating custom load of css as well as nested specialized templates](https://github.com/krakenjs/kraken-examples/blob/master/with.specialization/public/templates/nested/yin.dust)
