@@ -12,13 +12,13 @@ module.exports = function (app) {
         var orientation;
         //sample of setting context in the model
         switch(req.session.type) {
-            case 'yin':
-                orientation = 'moon';
-                break;
+        case 'yin':
+            orientation = 'moon';
+            break;
 
-            case 'yang':
-                orientation = 'sun';
-                break;
+        case 'yang':
+            orientation = 'sun';
+            break;
         }
         model.orientation = {
             is: orientation
