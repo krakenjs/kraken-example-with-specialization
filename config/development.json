@@ -38,17 +38,17 @@
                         "exts": [ "dust", "less" ]
                     },
                     "dust": {
-                        "module": "kraken-devtools/lib/plugins/dust",
+                        "module": "kraken-devtools/plugins/dustjs",
                         "files": "/templates/**/*.js",
                         "base": "templates",
                         "i18n": "config:i18n"
                     },
                     "less": {
-                        "module": "kraken-devtools/lib/plugins/less",
+                        "module": "kraken-devtools/plugins/less",
                         "files": "/css/**/*.css"
                     },
                     "copier": {
-                        "module": "kraken-devtools/lib/plugins/copier",
+                        "module": "kraken-devtools/plugins/copier",
                         "files": "**/*"
                     }
                 }
