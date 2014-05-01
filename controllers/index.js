@@ -4,11 +4,11 @@
 var IndexModel = require('../models/index');
 
 
-module.exports = function (app) {
+module.exports = function (router) {
 
     var model = new IndexModel();
 
-    app.get('/', function (req, res) {
+    router.get('/', function (req, res) {
         var orientation;
         //sample of setting context in the model
         switch(req.session.type) {
@@ -26,7 +26,7 @@ module.exports = function (app) {
         res.render('index', model);
     });
 
-    app.get('/setSpcl/:type', function(req, res) {
+    router.get('/setSpcl/:type', function(req, res) {
         req.session.type = req.params.type;
         res.redirect('/');
     });
