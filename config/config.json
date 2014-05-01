@@ -37,33 +37,43 @@
         },
 
         "router": {
-            "arguments": [{ "directory": "path:./controllers" }]
+            "module": {
+                "arguments": [{ "directory": "path:./controllers" }]
+            }
         },
 
         "fileNotFound": {
             "enabled": true,
             "priority": 130,
-            "module": "kraken-js/middleware/404",
-            "arguments": [ "errors/404" ]
+            "module": {
+                "name": "kraken-js/middleware/404",
+                "arguments": [ "errors/404" ]
+            }
         },
 
         "serverError": {
             "enabled": true,
             "priority": 140,
-            "module": "kraken-js/middleware/500",
-            "arguments": [ "errors/500" ]
+            "module": {
+                "name": "kraken-js/middleware/500",
+                "arguments": [ "errors/500" ]
+            }
         },
 
         "spclContext": {
             "enabled": true,
             "priority": 105,
-            "module": "path:./lib/specialization"
+            "module": {
+                "name": "path:./lib/specialization"
+            }
         },
 
         "templatePath": {
             "enabled":true,
             "priority": 96,
-            "module": "path:./lib/templatePath"
+            "module": {
+                "name": "path:./lib/templatePath"
+            }
         }
     }
 
