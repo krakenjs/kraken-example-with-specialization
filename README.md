@@ -1,3 +1,13 @@
+#### What is Template Specialization ?
+Template specialization is a way to dynamically switch partials in your views, to some other partial, based on some rules that you can specify in the form of a json config in you app.
+
+#### Why would you want to do this ?
+This may become important and very handy when:
+* you are writing apps that need to be supported for multiple locales and parts of it can look different in different country/regions
+* you want part of your views to look completely different across various devices (an alternate, more flexible solution to adaptive/responsive designs)
+* you want to A/B test
+..... Or any other creative way you'd like to use it.
+
 # specialization-example
 
 An example kraken 1.0 app demonstrating template specialization.
