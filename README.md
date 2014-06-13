@@ -2,7 +2,7 @@
 
 An example kraken 1.0 app demonstrating template specialization.
 
-# What is Template Specialization ?
+## What is Template Specialization ?
 Template specialization is a way to dynamically switch partials in your views, to some other partial, based on some rules that you can specify in the form of a json config in your app.
 
 ## Why would you want to do this ?
@@ -13,7 +13,7 @@ This may become important and very handy when:
 ..... Or any other creative way you'd like to use it.
 
 
-# How to setup the app with i18n from scratch by using generator-kraken ?
+## How to setup the app with i18n from scratch by using generator-kraken ?
 
 ### Create a simple scaffolded app using generator-kraken
 
@@ -260,9 +260,77 @@ You will see that the specialization rules will be set in the session and you wi
 
 ### To see specialization on client-side render
 
-* Change public/app.js
+* Change public/app.js with following:
+
+```
+require(['config'], function() {
+    require(['jquery', 'nougat'], function ($, nougat) {
+        console.info('required jquery and nougat');
+        var app = {
+            initialize: function () {
+                console.info('intialized view');
+                nougat.setContext($(document.body).data());
+                //Demonstrating specialization for
+                //client side rendering.
+                this.initializeView();
+
+            },
+
+            initializeView: function () {
+                $('#more').click(function () {
+                    console.info('clicked');
+                    nougat.viewRenderer
+                        .render('nested/yinyang', {message: 'More Info'})
+                        .done(function (content) {
+                            $('#moreInfo').html(content);
+                        });
+                });
+            }
+        };
+        app.initialize();
+    });
+});
+```
+
+The above code:
+1. Requires/loads the javascript necessary to perform a client side render.
+2. Sets up a button listener to trigger the client side render.
+The file `public/js/lib/nougat.js` is the client side render helper for dust.
+
+* Set the templatePath according to locale so that you can find the compiled templates in the right path when required from the browser. In the demo case we hard code it to `US/en`. But this can be done in conjunction with i18n for right locale.
+ In `config.json`
+```
+"templatePath": {
+    "enabled":true,
+    "priority": 96,
+    "module": {
+        "name": "path:./lib/templatePath"
+    }
+}
+```
+In `lib/templatePath`
+
+```
+'use strict';
+module.exports = function () {
+    return function (req, res, next) {
+        //Sample of setting context in res.locals
+        res.locals.templatePath = 'templates/US/en';
+        next();
+    };
+};
+```
+
+* Modify `templates/layouts/master.dust` to include the specialization map and the templatePath in a data-attribute
+
+```
+<body data-specialization='{_specialization|js|s}' data-template-path="{templatePath}/%s.js">
+```
+
 * Add dependency files (copy from `public/js/lib` in this project) and add the file from `public/config.js` to your project as well.
 
 Now repeat steps 1,2,3 from previous section and then click on the 'Tell Me More' button. You will see that templates/styles are different for different specializations.
 
-You can play with the specialization rules in the config + what you set in the context to see how dust partials gets specialized. Have Fun!!
+You can play with the specialization rules in the config + what you set in the context to see how dust partials gets specialized.
+
+Have Fun!!
