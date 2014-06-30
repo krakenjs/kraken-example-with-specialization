@@ -35,7 +35,7 @@ You will see that the specialization rules will be set in the session and you wi
 
 ###What does the sample app demonstrate?
 
-* [Adding rules into the app's config file](config/app.json#L24)
+* [Adding rules into the app's config file](config/config.json#L25)
 
 * [Setting the context from middleware](lib/specialization.js#L5)
 
