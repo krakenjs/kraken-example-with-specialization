@@ -12,6 +12,20 @@ This may become important and very handy when:
 * you want to A/B test
 ..... Or any other creative way you'd like to use it.
 
+## Installing this demo
+
+Clone, install and run.
+
+```shell
+git clone git@github.com:krakenjs/kraken-example-with-specialization.git
+cd kraken-examples-with-specialization
+npm install
+npm start
+```
+
+## Explore the app
+
+Visit [`http://localhost:8000`](http://localhost:8000)
 
 ## How to setup the app with i18n from scratch by using generator-kraken ?
 
