@@ -76,15 +76,8 @@
             "module": {
                 "name": "path:./lib/specialization"
             }
-        },
-
-        "templatePath": {
-            "enabled":true,
-            "priority": 96,
-            "module": {
-                "name": "path:./lib/templatePath"
-            }
         }
+
     }
 
 }
