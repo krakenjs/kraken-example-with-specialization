@@ -131,55 +131,62 @@ What above config means is for eg: partial `yingyang` will be replaced with part
 Similar syntax applies to the rest of the config.
 To learn more about semantics of the config and other options available, please be sure to read docs [here](http://github.com/krakenjs/karka).
 
-* Modify `config/config.json` to load in these rules under the property `specialization`
-
-```
-"specialization": "import:./specialization.json"
-```
-
 ### Including specialization into the render work flow
-#### Modify `view engines` in `config/config.json`
 
-```
-"view engines": {
-    "js": {
-        "module": "engine-munger",
-        "renderer": {
-            "method": "js",
-            "arguments": [
-                { "cache": true },
-                {
-                    "views": "config:express.views",
-                    "view engine": "config:express.view engine",
-                    "specialization": "config:specialization",
-                    "i18n": "config:i18n"
-                }
-            ]
-        }
-    }
-}
-```
+#### Modify `view engines` in `config/config.json` to use `makara@2` to use `makara@2` to use `makara@2` to use `makara@2`
 
-#### Modify `view engines` in `config/development.json`
 ```
 "view engines": {
     "dust": {
-        "module": "engine-munger",
+        "module": "makara",
         "renderer": {
-            "method": "dust",
+            "method": "js",
             "arguments": [
-                { "cache": false },
-                {
-                    "views": "config:express.views",
-                    "view engine": "config:express.view engine",
-                    "specialization": "config:specialization",
-                    "i18n": "config:i18n"
-                }
+                { "cache": true }
             ]
         }
     }
 }
 ```
+
+#### Add the `makara` middleware with the specialization configuration in `config/config.json`
+
+In the `middleware` section, add:
+
+```
+"makara": {
+    "priority": 100,
+    "enabled": true,
+    "module": {
+        "name": "makara",
+        "arguments": [ {
+            "i18n": "config:i18n",
+            "specialization": "import:./specialization.json"
+        } ]
+
+    }
+},
+```
+
+
+#### Modify `view engines` in `config/development.json` to use `makara@2`
+
+Notice the difference in caching.
+
+```
+"view engines": {
+    "dust": {
+        "module": "makara",
+        "renderer": {
+            "method": "dust",
+            "arguments": [
+                { "cache": false }
+            ]
+        }
+    }
+}
+```
+
 #### Set the context information before res.render
 
 This can be done in two ways: Setting context info into res.locals (or) in the model passed to res.render(view, model)
