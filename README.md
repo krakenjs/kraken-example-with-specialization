@@ -133,7 +133,7 @@ To learn more about semantics of the config and other options available, please 
 
 ### Including specialization into the render work flow
 
-#### Modify `view engines` in `config/config.json` to use `makara@2` to use `makara@2` to use `makara@2` to use `makara@2`
+#### Modify `view engines` in `config/config.json` to use `makara@2`
 
 ```
 "view engines": {
