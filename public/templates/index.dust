@@ -9,8 +9,4 @@
     <div class="center transbox">
         {>"yinyang" /}
     </div>
-    <div class="wrapper">
-        <button id="more" class="button">Tell me more...</button>
-        <div id="moreInfo"></div>
-    </div>
 {/body}

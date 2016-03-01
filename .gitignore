@@ -1,4 +1,5 @@
 .build
 *.swp
+.idea
 npm-debug.log
 node_modules
